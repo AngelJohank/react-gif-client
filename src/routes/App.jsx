@@ -8,7 +8,7 @@ export default function App() {
   const [gifs, setGifs] = useState(null);
 
   useEffect(() => {
-    searchGifs('morty', 10, setGifs);
+    searchGifs('pipo math', 15, setGifs);
   }, []);
 
   // Rendering
