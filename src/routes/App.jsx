@@ -8,7 +8,7 @@ export default function App() {
   const [gifs, setGifs] = useState(null);
 
   useEffect(() => {
-    searchGifs('pipo math', 15, setGifs);
+    searchGifs('random', 15, setGifs);
   }, []);
 
   // Rendering
@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <>
-      <h1>Trending gifs this</h1>
+      <h1>Gifs</h1>
       <div className="galery">{renderGifs()}</div>
     </>
   );
