@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getTrends } from '../services/giphy';
+import { searchGifs } from '../services/giphy';
 
 // Components
 import GifItem from '../components/GifItem';
@@ -8,7 +8,7 @@ export default function App() {
   const [gifs, setGifs] = useState(null);
 
   useEffect(() => {
-    getTrends(10, setGifs);
+    searchGifs('morty', 10, setGifs);
   }, []);
 
   // Rendering
