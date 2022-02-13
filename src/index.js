@@ -12,7 +12,6 @@ const router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/:query" element={<App />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
     </BrowserRouter>
