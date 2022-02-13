@@ -8,7 +8,7 @@ export default function App() {
   const [gifs, setGifs] = useState([]);
 
   useEffect(() => {
-    getTrends(6, setGifs);
+    getTrends(10, setGifs);
   }, []);
 
   // Rendering
