@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function GifForm() {
+export default function GifForm({ searchParams, setSearchParams }) {
   const [formData, setFormData] = useState({
     gifTitle: '',
   });
@@ -8,7 +8,7 @@ export default function GifForm() {
   // Handlers
   const submitHanlder = (event) => {
     event.preventDefault();
-    console.log(formData);
+    setSearchParams({ query: formData.gifTitle });
   };
 
   const changeHanldler = (event) => {
@@ -26,7 +26,7 @@ export default function GifForm() {
           value={formData.gifTitle}
           onChange={changeHanldler}
         />
-        <button type="submit">Search</button>
+        <button type="submit">Buscar gif</button>
       </form>
     </section>
   );
