@@ -14,10 +14,8 @@ export default function App() {
 
   // Rendering
   const renderGifs = () => {
-    if (!gifs) return <h2> Loading Gifs </h2>;
-    else {
-      return <GifList gifs={gifs} />;
-    }
+    if (gifs) return <GifList list={gifs} />;
+    else return <h2>Loading Gifs</h2>;
   };
 
   return (
