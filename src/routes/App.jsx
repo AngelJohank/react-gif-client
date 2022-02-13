@@ -4,6 +4,7 @@ import { getTrends } from '../services/giphy';
 // Components
 import GifList from '../components/GifList';
 import LoadingGifsScreen from '../components/LoadingGifsScreen';
+import GifForm from '../components/GifForm';
 
 export default function App() {
   const [gifs, setGifs] = useState(null);
@@ -20,7 +21,8 @@ export default function App() {
 
   return (
     <>
-      <h1>Gifs</h1>
+      <h1>Gifs // Testing mode</h1>
+      <GifForm />
       {renderGifs()}
     </>
   );
