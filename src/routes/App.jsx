@@ -2,20 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { getTrends } from '../services/giphy';
 
 // Components
-import GifItem from '../components/GifItem';
 import GifList from '../components/GifList';
+import LoadingGifsScreen from '../components/LoadingGifsScreen';
 
 export default function App() {
   const [gifs, setGifs] = useState(null);
 
   useEffect(() => {
-    getTrends(5, setGifs);
+    getTrends(10, setGifs);
   }, []);
 
   // Rendering
   const renderGifs = () => {
     if (gifs) return <GifList list={gifs} />;
-    else return <h2>Loading Gifs</h2>;
+    else return <LoadingGifsScreen />;
   };
 
   return (
