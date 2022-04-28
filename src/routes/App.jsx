@@ -27,7 +27,7 @@ export default function App() {
 
   return (
     <>
-      <h1>Gifs // Testing mode (hecho por tu causa Angel)</h1>
+      <h1>Gifs</h1>
       <GifForm searchParams={searchParams} setSearchParams={setSearchParams} />
       {renderGifs()}
     </>
